@@ -12,9 +12,10 @@
 
 В ходе прогона автотестов процент успешных составил - 61.11% (22 теста), неуспешных - 38,89% (14 тестов). На основании тестов были составлены соответствующие баг-репорты, которые можно найти в разделе issues
 
-![Allure-Report общий.png](..%2FAllure-Report%20%EE%E1%F9%E8%E9.png)
-![Allure-Report график.png](..%2FAllure-Report%20%E3%F0%E0%F4%E8%EA.png)
-![Allure-Report тесты.png](..%2FAllure-Report%20%F2%E5%F1%F2%FB.png)
+![Allure-Report общий](https://github.com/DianaKhorosavina/diploma-project/assets/143611523/993cf7c1-6976-43e3-91a6-6e5cbaa62e79)
+![Allure-Report график](https://github.com/DianaKhorosavina/diploma-project/assets/143611523/f4306b14-08b1-4914-84b3-dc77123e26f3)
+![Allure-Report тесты](https://github.com/DianaKhorosavina/diploma-project/assets/143611523/a559aa85-5058-4aa6-b600-0baa61ef07b4)
+
 
 ### Общие рекомендации 
 
