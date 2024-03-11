@@ -205,6 +205,24 @@ public class BuyingTourTest {
     }
 
     @Test
+    @DisplayName("Send request to purchase a tour by debit card with null in month field")
+    void requestWithNullInMonthFieldDebitCard() {
+        var debitPage = selectPage.debitBuy();
+        var validCard = DataHelper.generateNullInMonth();
+        debitPage.validCard(validCard);
+        debitPage.verifyErrorNotification("Неверно указан срок действия карты");
+    }
+
+    @Test
+    @DisplayName("Send request to purchase a tour by credit card with null in month field")
+    void requestWithNullInMonthFieldCreditCard() {
+        var creditPage = selectPage.creditBuy();
+        var validCard = DataHelper.generateNullInMonth();
+        creditPage.validCardCredit(validCard);
+        creditPage.verifyErrorNotification("Неверно указан срок действия карты");
+    }
+
+    @Test
     @DisplayName("Send request to purchase a tour by debit card with empty year field")
     void requestWithEmptyMontDebitCard() {
         var debitPage = selectPage.debitBuy();
@@ -215,7 +233,7 @@ public class BuyingTourTest {
 
     @Test
     @DisplayName("Send request to purchase a tour by credit card with empty year field")
-    void requestWithEmptyMontCreditCard() {
+    void requestWithEmptyYearCreditCard() {
         var creditPage = selectPage.creditBuy();
         var validCard = DataHelper.generateEmptyYear();
         creditPage.validCardCredit(validCard);
@@ -223,8 +241,26 @@ public class BuyingTourTest {
     }
 
     @Test
+    @DisplayName("Send request to purchase a tour by debit card with null year")
+    void requestWithNullYearDebitCard() {
+        var debitPage = selectPage.debitBuy();
+        var validCard = DataHelper.generateNullInYear();
+        debitPage.validCard(validCard);
+        debitPage.verifyErrorNotification("Истёк срок действия карты");
+    }
+
+    @Test
+    @DisplayName("Send request to purchase a tour by credit card with null year")
+    void requestWithNullYearCreditCard() {
+        var creditPage = selectPage.creditBuy();
+        var validCard = DataHelper.generateNullInYear();
+        creditPage.validCardCredit(validCard);
+        creditPage.verifyErrorNotification("Истёк срок действия карты");
+    }
+
+    @Test
     @DisplayName("Send request to purchase a tour by debit card with empty name field")
-    void requestWithEmptyYearDebitCard() {
+    void requestWithEmptyNameDebitCard() {
         var debitPage = selectPage.debitBuy();
         var validCard = DataHelper.generateNoName();
         debitPage.validCard(validCard);
@@ -233,7 +269,7 @@ public class BuyingTourTest {
 
     @Test
     @DisplayName("Send request to purchase a tour by credit card with empty name field")
-    void requestWithEmptyYearCreditCard() {
+    void requestWithEmptyNameCreditCard() {
         var creditPage = selectPage.creditBuy();
         var validCard = DataHelper.generateNoName();
         creditPage.validCardCredit(validCard);
@@ -244,7 +280,7 @@ public class BuyingTourTest {
     @DisplayName("Send request to purchase a tour by debit card with empty CVC field")
     void requestWithEmptyCVCDebitCard() {
         var debitPage = selectPage.debitBuy();
-        var validCard = DataHelper.generateEmptyCvc();
+        var validCard = DataHelper.generateEmptyCVC();
         debitPage.validCard(validCard);
         debitPage.verifyErrorNotification("Неверный формат");
     }
@@ -253,7 +289,25 @@ public class BuyingTourTest {
     @DisplayName("Send request to purchase a tour by credit card with empty CVC field")
     void requestWithEmptyCVCCreditCard() {
         var creditPage = selectPage.creditBuy();
-        var validCard = DataHelper.generateEmptyCvc();
+        var validCard = DataHelper.generateEmptyCVC();
+        creditPage.validCardCredit(validCard);
+        creditPage.verifyErrorNotification("Неверный формат");
+    }
+
+    @Test
+    @DisplayName("Send request to purchase a tour by debit card with null in CVC field")
+    void requestWitNullCVCDebitCard() {
+        var debitPage = selectPage.debitBuy();
+        var validCard = DataHelper.generateNullInCVC();
+        debitPage.validCard(validCard);
+        debitPage.verifyErrorNotification("Неверный формат");
+    }
+
+    @Test
+    @DisplayName("Send request to purchase a tour by credit card with null in CVC field")
+    void requestWitNullCVCCreditCard() {
+        var creditPage = selectPage.creditBuy();
+        var validCard = DataHelper.generateNullInCVC();
         creditPage.validCardCredit(validCard);
         creditPage.verifyErrorNotification("Неверный формат");
     }

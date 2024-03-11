@@ -79,7 +79,7 @@ public class DataHelper {
         return "56";
     }
     public static String generateLastMonth() {
-        return "01";
+        return "02";
     }
     public static String generateSpecialCharactersName() {
         return "@#@#$";
@@ -87,6 +87,12 @@ public class DataHelper {
 
     public static String generateNumbersInName() {
         return "5648648";
+    }
+    public static String generateNull() {
+        return "00";
+    }
+    public static String generateNullCVC() {
+        return "000";
     }
     public static String generateFieldsEmpty() {
         return "";
@@ -105,6 +111,9 @@ public class DataHelper {
     public static CardInfo generateLastYearCard() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateLastYear(), generateCVC());
     }
+    public static CardInfo generateNullInYear() {
+        return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateNull(), generateCVC());
+    }
     public static CardInfo generateEmptyYear() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateFieldsEmpty(), generateCVC());
     }
@@ -112,13 +121,20 @@ public class DataHelper {
     public static CardInfo generateIncompleteCVCCard() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateYear(), generateIncompleteCVC());
     }
-    public static CardInfo generateEmptyCvc() {
+    public static CardInfo generateNullInCVC() {
+        return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateYear(), generateNullCVC());
+    }
+    public static CardInfo generateEmptyCVC() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateMonth(), generateYear(), generateFieldsEmpty());
     }
 
     public static CardInfo generateLastMonthCard() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateLastMonth(), generateYear(), generateCVC());
     }
+    public static CardInfo generateNullInMonth() {
+        return new CardInfo(generateApprovedCard(), generateName("en"), generateNull(), generateYear(), generateCVC());
+    }
+
     public static CardInfo generateEmptyMonth() {
         return new CardInfo(generateApprovedCard(), generateName("en"), generateFieldsEmpty(), generateYear(), generateCVC());
     }
