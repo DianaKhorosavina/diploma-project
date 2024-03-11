@@ -12,9 +12,9 @@
 
 В ходе прогона автотестов процент успешных составил - 61.11% (22 теста), неуспешных - 38,89% (14 тестов). На основании тестов были составлены соответствующие баг-репорты, которые можно найти в разделе issues
 
-![](C:\Users\igpro\OneDrive\Рабочий стол\Allure-Report общий.png)
-![](C:\Users\igpro\OneDrive\Рабочий стол\Allure-Report график.png)
-![](C:\Users\igpro\OneDrive\Рабочий стол\Allure-Report тесты.png)
+![Allure-Report общий.png](..%2FAllure-Report%20%EE%E1%F9%E8%E9.png)
+![Allure-Report график.png](..%2FAllure-Report%20%E3%F0%E0%F4%E8%EA.png)
+![Allure-Report тесты.png](..%2FAllure-Report%20%F2%E5%F1%F2%FB.png)
 
 ### Общие рекомендации 
 
